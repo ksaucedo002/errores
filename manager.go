@@ -34,7 +34,7 @@ func ErrorResponse(c echo.Context, err error) error {
 	}(err, errc)
 	return c.JSON(code, &ErrorReponseApi{Code: code, Message: message})
 }
-func JsonErrorResponse(c echo.Context, err error) error {
+func JSONErrorResponse(c echo.Context, err error) error {
 	errc := NewBadRequestf(err, ErrInvalidJSON)
 	return ErrorResponse(c, errc)
 }
