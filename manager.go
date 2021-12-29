@@ -34,10 +34,10 @@ func ErrorResponse(c echo.Context, err error) error {
 	}(err, errc)
 	return c.JSON(code, &ErrorReponseApi{Code: code, Message: message})
 }
-func JSONErrorResponse(c echo.Context, err error) error {
+func JSONErrorResponse(c echo.Context) error {
 	return ErrorResponse(c, NewBadRequestf(nil, ErrInvalidJSON))
 }
-func QueryErrorResponse(c echo.Context, err error) error {
+func QueryErrorResponse(c echo.Context) error {
 	return ErrorResponse(c, NewBadRequestf(nil, ErrInvalidQueryParam))
 }
 
