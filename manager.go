@@ -35,8 +35,10 @@ func ErrorResponse(c echo.Context, err error) error {
 	return c.JSON(code, &ErrorReponseApi{Code: code, Message: message})
 }
 func JSONErrorResponse(c echo.Context, err error) error {
-	errc := NewBadRequestf(err, ErrInvalidJSON)
-	return ErrorResponse(c, errc)
+	return ErrorResponse(c, NewBadRequestf(nil, ErrInvalidJSON))
+}
+func QueryErrorResponse(c echo.Context, err error) error {
+	return ErrorResponse(c, NewBadRequestf(nil, ErrInvalidQueryParam))
 }
 
 ///Mejorar la gestion de errores generados desde la base de datos
