@@ -1,7 +1,8 @@
 package errores
 
 const (
-	ErrInvalidJSON           = "estructura json invalida"
+	ErrInvalidJSON           = "estructura json invalida, revisar la documentación"
+	ErrInvalidQueryParam     = "query params invalidos, revisar la documentación"
 	ErrInvalidToken          = "el token es invalido"
 	ErrTokenNull             = "no se encontro el token"
 	ErrSigningTokenString    = "no se pudo authentificar"

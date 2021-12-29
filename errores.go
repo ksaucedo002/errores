@@ -25,6 +25,9 @@ func NewBadRequestf(err error, format string, a ...interface{}) error {
 func NewInternalf(err error, format string, a ...interface{}) error {
 	return newErrf(err, fmt.Sprintf(format, a...), http.StatusInternalServerError)
 }
+func NewUnsupported(err error, format string, a ...interface{}) error {
+	return newErrf(err, fmt.Sprintf(format, a...), http.StatusUnsupportedMediaType)
+}
 func NewUnauthorizedf(err error, format string, a ...interface{}) error {
 	return newErrf(err, fmt.Sprintf(format, a...), http.StatusUnauthorized)
 }
