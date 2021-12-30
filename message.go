@@ -8,9 +8,10 @@ const (
 	ErrSigningTokenString    = "no se pudo authentificar"
 	ErrNoDefined             = "hubo un error, no esperado"
 	ErrDatabaseRequest       = "no se pudo realizar la operacion"
-	ErrRecordNotFaund        = "no se encontrar el registro"
+	ErrDatabaseInternal      = "algo paso, no se pudo realizar la operacion"
+	ErrRecordNotFaund        = "no se encontro el registro"
 	ErrRecord                = "no se pudo guardar el registro"
 	ErrUsernameExists        = "el usuario ya existe"
-	ErrAuthorizationHeader   = "Authorization header no encontrado"
+	ErrAuthorizationHeader   = "authorization header no encontrado"
 	ErrUserOrPasswordInvalid = "usuario o password incorrectos"
 )
